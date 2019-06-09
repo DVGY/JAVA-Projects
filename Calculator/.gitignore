@@ -1,0 +1,17 @@
+*.class
+nbactions.xml
+nb-configuration.xml
+target/
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/s
+*.jar
+*.war
+*.ear
+
+

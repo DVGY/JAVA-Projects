@@ -1,0 +1,319 @@
+
+#optionView
+{
+    -fx-border-width: 1.4;
+    -fx-border-color: black;
+    -fx-background-color:rgb( 244, 208, 63 );
+    -fx-background-size: 30,30;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left,center;
+    -fx-background-image: url(option.png);
+}
+#hboxView
+{
+ -fx-background-color: rgb(42,71,71);   
+}
+#gridView
+{
+    -fx-background-color:white;
+    
+}
+#optionView:hover
+{
+    -fx-background-color: rgb( 88, 214, 141 );
+}
+#optionView:pressed
+{
+    -fx-background-color: rgb( 88, 214, 141 );
+}
+
+#opt_std
+{
+    -fx-font-weight: bold;  
+}
+#opt_sci
+{
+    -fx-font-weight: bold;
+}
+
+#textView
+{
+    -fx-text-fill: white;
+    -fx-font-weight:bold;
+    -fx-background-color:  rgb(42,71,71) ;    
+}
+.button{
+    -fx-font-weight: bold;
+    -fx-background-radius: 0;
+    -fx-background-color:linear-gradient(to right bottom,#2A4747,#2F4F4F);
+      
+}
+#one
+{
+    -fx-text-fill:White;   
+}
+#one:hover
+{
+    -fx-text-fill:rbg( 253, 254, 254 );
+    -fx-background-color:rgb(244, 208, 63);
+}
+#two
+{
+    -fx-text-fill:White;    
+}
+#two:hover
+{
+    -fx-text-fill:rbg( 253, 254, 254 );
+    -fx-background-color:rgb(244, 208, 63);
+}
+
+#three
+{
+    -fx-text-fill:White;
+    
+}
+#three:hover
+{
+    -fx-text-fill:rbg( 253, 254, 254 );
+    -fx-background-color:rgb(244, 208, 63);
+}
+#four
+{
+    -fx-text-fill:White;
+    
+}
+#four:hover
+{
+    -fx-text-fill:rbg( 253, 254, 254 );
+    -fx-background-color:rgb(244, 208, 63);
+}
+#five
+{
+    -fx-text-fill:White;
+    
+}
+#five:hover
+{
+    -fx-text-fill:rbg( 253, 254, 254 );
+    -fx-background-color:rgb(244, 208, 63);
+}
+#six
+{
+    -fx-text-fill:White;
+    
+}
+#six:hover
+{
+    -fx-text-fill:rbg( 253, 254, 254 );
+    -fx-background-color:rgb(244, 208, 63);
+}
+#seven
+{
+    -fx-text-fill:White;
+    
+}
+#seven:hover
+{
+    -fx-text-fill:rbg( 253, 254, 254 );
+    -fx-background-color:rgb(244, 208, 63);
+}
+#Eight
+{
+    -fx-text-fill:White;
+    
+}
+#Eight:hover
+{
+    -fx-text-fill:rbg( 253, 254, 254 );
+    -fx-background-color:rgb(244, 208, 63);
+}
+#nine
+{
+    -fx-text-fill:White;
+    
+}
+#nine:hover
+{
+    -fx-text-fill:rbg( 253, 254, 254 );
+    -fx-background-color:rgb(244, 208, 63);
+}
+#ten
+{
+    -fx-text-fill:White;
+    
+}
+#ten:hover
+{
+    -fx-text-fill:rbg( 253, 254, 254 );
+    -fx-background-color:rgb(244, 208, 63);
+}
+#cancel
+{
+    -fx-text-fill:White;
+    
+}
+#cancel:hover
+{
+    -fx-text-fill:rbg( 253, 254, 254 );
+    -fx-background-color:rgb(244, 208, 63);
+}
+#allClear
+{
+    -fx-text-fill:White;
+}   
+#allClear:hover
+{
+    -fx-text-fill:rbg( 253, 254, 254 );
+    -fx-background-color:rgb(244, 208, 63);
+}
+#equal
+{
+    -fx-text-fill:White;
+    
+}
+#equal:hover
+{
+ -fx-text-fill:rgb(253, 254, 254);
+
+-fx-background-color:rgb( 39, 174, 96 );  
+}
+#squareRoot
+{
+    -fx-text-fill:White;
+    
+}
+#squareRoot:hover
+{
+    -fx-text-fill:rbg( 253, 254, 254 );
+    -fx-background-color:rgb(244, 208, 63);
+}
+#zero
+{
+    -fx-text-fill:White;
+    
+}
+#zero:hover
+{
+-fx-text-fill:rgb(253, 254, 254);
+
+-fx-background-color:rgb( 39, 174, 96 );    
+}
+#decimal
+{
+    -fx-text-fill:White;
+    
+}
+#decimal:hover
+{
+    -fx-text-fill:rbg( 253, 254, 254 );
+    -fx-background-color:rgb(244, 208, 63);
+}
+#percentage
+{
+    -fx-text-fill:White;
+    
+}
+#percentage:hover
+{
+    -fx-text-fill:rbg( 253, 254, 254 );
+    -fx-background-color:rgb(244, 208, 63);
+}
+#plus
+{
+    -fx-text-fill:rgb( 243, 156, 18 );
+    
+}
+#plus:hover
+{
+    -fx-text-fill:rgb(42,71,71);
+    -fx-background-color:rgb(243,156,18);
+}
+#minus
+{
+    -fx-text-fill:rgb( 243, 156, 18 );
+    
+}
+#minus:hover
+{
+    -fx-text-fill:rgb(42,71,71);
+    -fx-background-color:rgb(243,156,18);
+}
+#divide
+{
+    -fx-text-fill:rgb( 243, 156, 18 );
+    
+}
+#divide:hover
+{
+    -fx-text-fill:rgb(42,71,71);
+    -fx-background-color:rgb(243,156,18);
+}
+#sin
+{
+    -fx-text-fill:rgb( 243, 156, 18 );
+    
+}
+#sin:hover
+{
+    -fx-text-fill:rgb(42,71,71);
+    -fx-background-color:rgb(243,156,18);
+}
+#cos
+{
+    -fx-text-fill:rgb( 243, 156, 18 );
+   
+}
+#cos:hover
+{
+    -fx-text-fill:rgb(42,71,71);
+    -fx-background-color:rgb(243,156,18);
+}
+#tan
+{
+    -fx-text-fill:rgb( 243, 156, 18 );
+    
+}
+#tan:hover
+{
+    -fx-text-fill:rgb(42,71,71);
+    -fx-background-color:rgb(243,156,18);
+}
+
+#xInverse
+{
+    -fx-text-fill:rgb( 243, 156, 18 );
+    
+}
+#xInverse:hover
+{
+    -fx-text-fill:rgb(42,71,71);
+    -fx-background-color:rgb(243,156,18);
+}
+#xSquare
+{
+    -fx-text-fill:rgb( 243, 156, 18 );
+    
+}
+#xSquare:hover
+{
+    -fx-text-fill:rgb(42,71,71);
+    -fx-background-color:rgb(243,156,18);
+}
+#mul
+{
+    -fx-text-fill:rgb( 243, 156, 18 );
+  
+  
+}
+#mul:hover
+{
+    -fx-text-fill:rgb(42,71,71);
+    -fx-background-color:rgb(243,156,18);
+}
+
+
+
+
+
+
+
