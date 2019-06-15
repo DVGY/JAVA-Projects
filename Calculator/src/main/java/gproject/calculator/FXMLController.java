@@ -113,6 +113,7 @@ public class FXMLController implements Initializable {
     private float result;
     boolean flag = true;
     boolean sucessiveOperation = false;
+    boolean afterOperatorPressed= false;
     String numericalValue="";
     String operator="";
 
@@ -125,29 +126,13 @@ public class FXMLController implements Initializable {
         numericalValue=((Button)event.getSource()).getText();
         textView.setText(numericalValue);
        }
-       else if("+".equals(textView.getText()))
+       else if(afterOperatorPressed)
                {
                    textView.setText("");
-        numericalValue=((Button)event.getSource()).getText();
-        textView.setText(numericalValue);
-               }
-        else if("*".equals(textView.getText()))
-               {
-                   textView.setText("");
-        numericalValue=((Button)event.getSource()).getText();
-        textView.setText(numericalValue);
-               }
-         else if("/".equals(textView.getText()))
-               {
-                   textView.setText("");
-        numericalValue=((Button)event.getSource()).getText();
-        textView.setText(numericalValue);
-               }
-          else if("-".equals(textView.getText()))
-               {
-                   textView.setText("");
-        numericalValue=((Button)event.getSource()).getText();
-        textView.setText(numericalValue);
+                   numericalValue=((Button)event.getSource()).getText();
+                   numericalValue =textView.getText()+numericalValue;
+                   textView.setText(numericalValue);
+                   afterOperatorPressed =false;
                }
        else
        {
@@ -160,22 +145,23 @@ public class FXMLController implements Initializable {
     @FXML
     private void handleOperatorButtonAction(ActionEvent event)
     {
+        
         if(sucessiveOperation)
         {
             numberOne=result;
             flag =false;
         }
         
-        if(flag)
+       if(flag)
        {
        numberOne = Float.parseFloat(numericalValue);
-       numericalValue= " ";
+       numericalValue= "";
        flag= false;
        }
        operator = ((Button)event.getSource()).getText();
         
        textView.setText(operator); 
-        
+       afterOperatorPressed= true; 
         
         
         
@@ -192,7 +178,7 @@ public class FXMLController implements Initializable {
         if(!flag)
        {
        numberTwo = Float.parseFloat(numericalValue);
-       numericalValue= " ";
+       numericalValue= "";
        flag = true;
        }
         result= modelObj.compute(numberOne, numberTwo, operator);
