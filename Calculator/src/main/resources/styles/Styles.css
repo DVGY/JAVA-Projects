@@ -11,7 +11,7 @@
 }
 #hboxView
 {
- -fx-background-color: rgb(42,71,71);   
+ -fx-background-color:rgb(42,71,71);   
 }
 #gridView
 {
@@ -20,7 +20,7 @@
 }
 #optionView:hover
 {
-    -fx-background-color: rgb( 88, 214, 141 );
+    -fx-background-color: rgb(88, 214, 141 );
 }
 #optionView:pressed
 {
@@ -40,7 +40,7 @@
 {
     -fx-text-fill: white;
     -fx-font-weight:bold;
-    -fx-background-color:  rgb(42,71,71) ;    
+    -fx-background-color:rgb(42,71,71) ;    
 }
 .button{
     -fx-font-weight: bold;
@@ -54,7 +54,7 @@
 }
 #one:hover
 {
-    -fx-text-fill:rbg( 253, 254, 254 );
+    
     -fx-background-color:rgb(244, 208, 63);
 }
 #two
@@ -63,7 +63,7 @@
 }
 #two:hover
 {
-    -fx-text-fill:rbg( 253, 254, 254 );
+    
     -fx-background-color:rgb(244, 208, 63);
 }
 
@@ -74,7 +74,7 @@
 }
 #three:hover
 {
-    -fx-text-fill:rbg( 253, 254, 254 );
+    
     -fx-background-color:rgb(244, 208, 63);
 }
 #four
@@ -84,7 +84,7 @@
 }
 #four:hover
 {
-    -fx-text-fill:rbg( 253, 254, 254 );
+    
     -fx-background-color:rgb(244, 208, 63);
 }
 #five
@@ -94,7 +94,7 @@
 }
 #five:hover
 {
-    -fx-text-fill:rbg( 253, 254, 254 );
+    
     -fx-background-color:rgb(244, 208, 63);
 }
 #six
@@ -104,7 +104,7 @@
 }
 #six:hover
 {
-    -fx-text-fill:rbg( 253, 254, 254 );
+    
     -fx-background-color:rgb(244, 208, 63);
 }
 #seven
@@ -114,7 +114,7 @@
 }
 #seven:hover
 {
-    -fx-text-fill:rbg( 253, 254, 254 );
+    
     -fx-background-color:rgb(244, 208, 63);
 }
 #Eight
@@ -124,8 +124,8 @@
 }
 #Eight:hover
 {
-    -fx-text-fill:rbg( 253, 254, 254 );
-    -fx-background-color:rgb(244, 208, 63);
+   
+   -fx-background-color:rgb(244, 208, 63);
 }
 #nine
 {
@@ -134,7 +134,7 @@
 }
 #nine:hover
 {
-    -fx-text-fill:rbg( 253, 254, 254 );
+    
     -fx-background-color:rgb(244, 208, 63);
 }
 #ten
@@ -144,7 +144,7 @@
 }
 #ten:hover
 {
-    -fx-text-fill:rbg( 253, 254, 254 );
+   
     -fx-background-color:rgb(244, 208, 63);
 }
 #cancel
@@ -154,7 +154,7 @@
 }
 #cancel:hover
 {
-    -fx-text-fill:rbg( 253, 254, 254 );
+   
     -fx-background-color:rgb(244, 208, 63);
 }
 #allClear
@@ -163,7 +163,7 @@
 }   
 #allClear:hover
 {
-    -fx-text-fill:rbg( 253, 254, 254 );
+   
     -fx-background-color:rgb(244, 208, 63);
 }
 #equal
@@ -173,7 +173,7 @@
 }
 #equal:hover
 {
- -fx-text-fill:rgb(253, 254, 254);
+ 
 
 -fx-background-color:rgb( 39, 174, 96 );  
 }
@@ -184,7 +184,6 @@
 }
 #squareRoot:hover
 {
-    -fx-text-fill:rbg( 253, 254, 254 );
     -fx-background-color:rgb(244, 208, 63);
 }
 #zero
@@ -194,7 +193,7 @@
 }
 #zero:hover
 {
--fx-text-fill:rgb(253, 254, 254);
+
 
 -fx-background-color:rgb( 39, 174, 96 );    
 }
@@ -205,7 +204,7 @@
 }
 #decimal:hover
 {
-    -fx-text-fill:rbg( 253, 254, 254 );
+    
     -fx-background-color:rgb(244, 208, 63);
 }
 #percentage
@@ -215,7 +214,7 @@
 }
 #percentage:hover
 {
-    -fx-text-fill:rbg( 253, 254, 254 );
+    
     -fx-background-color:rgb(244, 208, 63);
 }
 #plus
