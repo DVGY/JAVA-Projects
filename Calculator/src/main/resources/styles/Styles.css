@@ -9,6 +9,14 @@
     -fx-background-position:left,center;
     -fx-background-image: url(option.png);
 }
+#cancel
+{
+    
+    -fx-background-image:url(dele.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+    -fx-background-size: 30,30;
+}
 #hboxView
 {
  -fx-background-color:rgb(42,71,71);   
@@ -155,7 +163,7 @@
 #cancel:hover
 {
    
-    -fx-background-color:rgb(244, 208, 63);
+    -fx-background-color:rgb(39, 174, 96);
 }
 #allClear
 {
@@ -164,7 +172,7 @@
 #allClear:hover
 {
    
-    -fx-background-color:rgb(244, 208, 63);
+    -fx-background-color:rgb(39, 174, 96);
 }
 #equal
 {
@@ -184,7 +192,7 @@
 }
 #squareRoot:hover
 {
-    -fx-background-color:rgb(244, 208, 63);
+    -fx-background-color:rgb(39, 174, 96);
 }
 #zero
 {
@@ -205,7 +213,7 @@
 #decimal:hover
 {
     
-    -fx-background-color:rgb(244, 208, 63);
+    -fx-background-color:rgb(39, 174, 96);
 }
 #percentage
 {
@@ -215,7 +223,7 @@
 #percentage:hover
 {
     
-    -fx-background-color:rgb(244, 208, 63);
+    -fx-background-color:rgb(39, 174, 96);
 }
 #plus
 {
