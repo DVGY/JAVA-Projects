@@ -26,7 +26,6 @@ public class FXMLController implements Initializable {
     int inFucntionState;
     String numericalValue = "";
     String operator = "";
-
     @FXML
     private void handleNumberButtonAction(ActionEvent event) {
         if ("0".equals(textView.getText())) {
@@ -36,14 +35,12 @@ public class FXMLController implements Initializable {
         } else if (afterOperatorPressed) {
             textView.setText("");
             numericalValue = ((Button) event.getSource()).getText();
-            numericalValue = textView.getText() + numericalValue;
             textView.setText(numericalValue);
             afterOperatorPressed = false;
 
         } else if (inFunctionModule) {
             textView.setText("");
             numericalValue = ((Button) event.getSource()).getText();
-            numericalValue = textView.getText() + numericalValue;
             textView.setText(numericalValue);
             inFunctionModule = false;
         } else {
@@ -99,17 +96,17 @@ public class FXMLController implements Initializable {
             }
 
         } else {
-            textView.setText("");
+            textView.setText("0");
             numericalValue="";
             numberOne = 0;
             operator = "";
             numberTwo = 0;
             result = 0;
             flag = true;
-            sucessiveOperation = true;
             sucessiveOperation = false;
             afterOperatorPressed = false;
             inFunctionModule = false;
+            inFucntionState =0;
         }
     }
 
