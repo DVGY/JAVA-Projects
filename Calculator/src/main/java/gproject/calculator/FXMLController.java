@@ -6,107 +6,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 
+import javafx.scene.control.TextField;
 
 public class FXMLController implements Initializable {
 
     @FXML
-    private HBox hboxView;
-
-    @FXML
-    private MenuButton optionView;
-
-    @FXML
-    private MenuItem opt_std;
-
-    @FXML
-    private MenuItem opt_sci;
-
-    @FXML
     private TextField textView;
 
-    @FXML
-    private GridPane gridView;
-
-    @FXML
-    private Button minus;
-
-    @FXML
-    private Button plus;
-
-    @FXML
-    private Button cancel;
-
-    @FXML
-    private Button allClear;
-
-    @FXML
-    private Button zero;
-
-    @FXML
-    private Button one;
-
-    @FXML
-    private Button two;
-
-    @FXML
-    private Button three;
-
-    @FXML
-    private Button four;
-
-    @FXML
-    private Button five;
-
-    @FXML
-    private Button six;
-
-    @FXML
-    private Button seven;
-
-    @FXML
-    private Button Eight;
-
-    @FXML
-    private Button nine;
-
-    @FXML
-    private Button percentage;
-
-    @FXML
-    private Button decimal;
-
-    @FXML
-    private Button squareRoot;
-
-    @FXML
-    private Button divide;
-
-    @FXML
-    private Button equal;
-
-    @FXML
-    private Button mul;
-
-    @FXML
-    private Button sin;
-
-    @FXML
-    private Button xSquare;
-
-    @FXML
-    private Button xInverse;
-
-    @FXML
-    private Button tan;
-
-    @FXML
-    private Button cos;
     Model modelObj = new Model();
 
     private float numberOne;
@@ -132,18 +39,14 @@ public class FXMLController implements Initializable {
             numericalValue = textView.getText() + numericalValue;
             textView.setText(numericalValue);
             afterOperatorPressed = false;
-            
-        }   
-        else if(inFunctionModule)
-        {
-         textView.setText("");
-         numericalValue = ((Button) event.getSource()).getText();
-         numericalValue = textView.getText() + numericalValue;
-         textView.setText(numericalValue);   
-         inFunctionModule = false;   
-        }
-        
-         else {
+
+        } else if (inFunctionModule) {
+            textView.setText("");
+            numericalValue = ((Button) event.getSource()).getText();
+            numericalValue = textView.getText() + numericalValue;
+            textView.setText(numericalValue);
+            inFunctionModule = false;
+        } else {
             numericalValue = ((Button) event.getSource()).getText();
             numericalValue = textView.getText() + numericalValue;
             textView.setText(numericalValue);
@@ -176,24 +79,37 @@ public class FXMLController implements Initializable {
         if ("cancel".equals(((Button) event.getSource()).getId())) {
             if ("0".equals(textView.getText())) {
                 textView.setText("");
-            } else if (flag == true) {
+            } /**/ else if (flag == true && (!sucessiveOperation)) {
                 int len = numericalValue.length();
                 numericalValue = numericalValue.substring(0, len - 1);
                 textView.setText(numericalValue);
-            } else if (flag == false && (afterOperatorPressed == true)) {
+            } else if (flag == false && (afterOperatorPressed == true) && (!sucessiveOperation)) {
                 operator = "";
                 textView.setText("");
-            } else if ((flag == false) && (afterOperatorPressed == false)) {
+            } else if ((flag == false) && (afterOperatorPressed == false) && (!sucessiveOperation)) {
                 int len = numericalValue.length();
                 numericalValue = numericalValue.substring(0, len - 1);
                 textView.setText(numericalValue);
+            } else if (sucessiveOperation) {
+                String dispResultHandleClearButtonAction = textView.getText();
+                int len = dispResultHandleClearButtonAction.length();
+                dispResultHandleClearButtonAction = dispResultHandleClearButtonAction.substring(0, len - 1);
+                textView.setText(dispResultHandleClearButtonAction);
+                result = Float.valueOf(dispResultHandleClearButtonAction);
             }
+
         } else {
             textView.setText("");
+            numericalValue="";
             numberOne = 0;
             operator = "";
             numberTwo = 0;
-            result=0;
+            result = 0;
+            flag = true;
+            sucessiveOperation = true;
+            sucessiveOperation = false;
+            afterOperatorPressed = false;
+            inFunctionModule = false;
         }
     }
 
@@ -201,42 +117,39 @@ public class FXMLController implements Initializable {
     private void handleFunctionButtonAction(ActionEvent event) {
         String buttonId;
         inFunctionModule = true;
-        inFucntionState=1;
-        
+        inFucntionState = 1;
+
         buttonId = ((Button) event.getSource()).getId();
         switch (buttonId) {
             case "squareRoot":
-                if(sucessiveOperation)
-                {
-                    numberOne=result;
-                    textView.setText("sqrt("+ result+")");
+                if (sucessiveOperation) {
+                    numberOne = result;
+                    textView.setText("sqrt(" + result + ")");
                     operator = buttonId;
-                }
-                else
-                {
+                } else {
                     textView.setText("sqrt(");
                     operator = buttonId;
                 }
                 break;
             case "sin":
                 textView.setText("sin(");
-                operator=buttonId;
+                operator = buttonId;
                 break;
             case "cos":
                 textView.setText("cos(");
-                operator=buttonId;
+                operator = buttonId;
                 break;
             case "tan":
                 textView.setText("tan(");
-                operator=buttonId;
+                operator = buttonId;
                 break;
             case "xInverse":
                 textView.setText("x INV(");
-                operator=buttonId;
+                operator = buttonId;
                 break;
             case "xSquare":
                 textView.setText("square(");
-                operator=buttonId;
+                operator = buttonId;
                 break;
             default:
                 break;
@@ -256,24 +169,21 @@ public class FXMLController implements Initializable {
                 flag = true;
             }
         }
-        
-        if ((!inFunctionModule) && (inFucntionState==1)) {
-            numberTwo=0;
-            if(numericalValue.isEmpty())
-            {
-                numberOne=0;
+
+        if ((!inFunctionModule) && (inFucntionState == 1)) {
+            numberTwo = 0;
+            if (numericalValue.isEmpty()) {
+                numberOne = 0;
+            } else {
+                numberOne = Float.parseFloat(numericalValue);
+
             }
-            else
-            {
-            numberOne=Float.parseFloat(numericalValue);
-            
-            }
-        }  
+        }
         result = modelObj.compute(numberOne, numberTwo, operator);
         String dispResult = Float.toString(result);
         textView.setText(dispResult);
         sucessiveOperation = true;
-       
+
     }
 
     @Override
